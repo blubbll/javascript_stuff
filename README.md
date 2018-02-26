@@ -3,7 +3,7 @@ some javascript snippets i find useful
 
 - find.js
 
-usage:
+  - usage:
   find.byId("#content");
   find.byData('toggle="modal"');
   
