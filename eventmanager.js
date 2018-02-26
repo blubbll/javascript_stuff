@@ -14,11 +14,11 @@ function addEvent(e, n, t) {
         event: n
     }) : (e.attachEvent("on" + n, v), {
         elem: e,
-        handler: v,
+        handler: v, 
         event: n
     })
 }
 
 function removeEvent(e, handler) {
-    e.elem.removeEventListener ? e.elem.removeEventListener(e.event, handler) : e.elem.detachEvent("on" + e.event, handler)
+    e.elem.removeEventListener ? e.elem.removeEventListener(event, e.handler) : e.elem.detachEvent("on" + event, e.handler)
 }
