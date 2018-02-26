@@ -4,8 +4,8 @@ some javascript snippets i find useful
 - find.js
 
   - usage:
-  find.byId("#content");
-  find.byData('toggle="modal"');
+    - find.byId("#content");
+    - find.byData('toggle="modal"');
   
-import:
-  https://rawgithub.com/blubbll/javascript_stuff/master/find.js
+  - import:
+    https://rawgithub.com/blubbll/javascript_stuff/master/find.js
