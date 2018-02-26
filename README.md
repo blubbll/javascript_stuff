@@ -14,8 +14,10 @@ some javascript snippets i find useful
 
   - usage:
     - addEvent(elem, "click", function(){
-      action();
-      }, false);
+    
+       action();
+      
+       }, false);
   
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/eventmanager.js
