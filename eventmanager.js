@@ -19,6 +19,6 @@ function addEvent(e, n, t) {
     })
 }
 
-function removeEvent(e) {
-    e.elem.removeEventListener ? e.elem.removeEventListener(e.event, e.handler) : e.elem.detachEvent("on" + e.event, e.handler)
+function removeEvent(e, handler) {
+    e.elem.removeEventListener ? e.elem.removeEventListener(e.event, handler) : e.elem.detachEvent("on" + e.event, handler)
 }
