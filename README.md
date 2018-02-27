@@ -4,11 +4,11 @@ some javascript snippets i find useful
 - find.js
 
   - usage:
-    - find.byId("#content");
-    - find.byData('toggle="modal"');
+    - find("#content");
+    - find('[toggle="modal"]');
   
   - import:
-    - https://rawgithub.com/blubbll/javascript_stuff/master/find.js
+    - https://rawgithub.com/blubbll/javascript_stuff/master/dist/find.min.js
 
 - eventManager.js
 
