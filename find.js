@@ -1,16 +1,17 @@
 function find(search, all = false) {
-
+    //Attr
     if (search.indexOf('=') !== -1) {
         type = '=';
         attr = str.split('=')[0];
         val = str.split('=')[1];
+     //Attr mit value
     } else if (search.indexOf('[') !== -1 && search.indexOf(']') !== -1) {
         type = "[]";
         attr = search.replace("[", '').replace("]", '');
+       //Normaler typ
     } else {
         type = search.charAt(0);
     }
-    //singular
     switch (type) {
         //class
         case '.':
@@ -41,14 +42,16 @@ function find(search, all = false) {
 }
 
 function findAll(search) {
-
+    //Attr
     if (search.indexOf('=') !== -1) {
         type = '=';
         attr = str.split('=')[0];
         val = str.split('=')[1];
+     //Attr mit value
     } else if (search.indexOf('[') !== -1 && search.indexOf(']') !== -1) {
         type = "[]";
         attr = search.replace("[", '').replace("]", '');
+       //Normaler typ
     } else {
         type = search.charAt(0);
     }
@@ -57,7 +60,6 @@ function findAll(search) {
         case '.':
             return document.getElementsByClassName(search);
             break;
-
             //id
         case '#':
             return document.getElementsById(search);
