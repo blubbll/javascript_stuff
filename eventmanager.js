@@ -1,17 +1,32 @@
-function addEvent(element, action, func){
+//Add function for specific action to element
+function addEvent(element, action, func) {
+
+    window[element + action] = func;
     
-    window.events_+action = func;
-    handle = window.events_+action;
-    
-    element.addEventListener(element, handle);
-    
+    handle = window[element + action];
+    if (document.addEventListener)
+        element.addEventListener(action, handle, false);
+    else if (document.detachEvent)
+        element.attachEventListener(action, handle);
+
 }
 
-function removeEvent(element, action){
+//Removes function for specific action of element
+function removeEvent(element, action) {
     
-    window.action_func = func;
-    handle = window.events_+action;
+    handle = window[element + action];
     
-    element.addEventListener(element, handle);
-    
+    if (document.removeEventListener)
+        element.removeEventListener(action, handle, false);
+    else if (document.detachEvent)
+        element.detachEvent(action, handle);
+}
+
+//Removes all Events from element
+function removeEvents(element) {
+    var clone = element.cloneNode();
+    while (element.firstChild) {
+        clone.appendChild(element.lastChild);
+    }
+    element.parentNode.replaceChild(clone, element);
 }
