@@ -9,6 +9,8 @@ some javascript snippets i find useful
     - find("button");
     - find("[w4]");
     - find('[toggle="modal"]');
+    - findAll('.test');
+    - findAll ...
   
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/dist/find.min.js
