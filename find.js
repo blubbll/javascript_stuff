@@ -17,7 +17,7 @@ var find = {
     allByClass: function(e) {
         return q = document.getElementsByClassName(e.slice(1)), null == q ? document.documentElement : q
     },
-    byTagName: function(e) {
+    byTagname: function(e) {
         return q = document.getElementsByTagName(e)[0], null == q ? document.documentElement : q
     }
 };
