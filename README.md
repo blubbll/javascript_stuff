@@ -5,6 +5,9 @@ some javascript snippets i find useful
 
   - usage:
     - find("#content");
+    - find(".classname");
+    - find("button");
+    - find("[w4]");
     - find('[toggle="modal"]');
   
   - import:
