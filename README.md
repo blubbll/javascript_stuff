@@ -18,7 +18,7 @@ some javascript snippets i find useful
 - eventManager.js
 
   - usage:
-    - add an Event:
+    - add an Event to Element:
     
        addEvent(elem, "click", function(){
     
@@ -27,9 +27,10 @@ some javascript snippets i find useful
        }, false);
        
        
-     - remove an Event:
+     - remove an Event from Element:
        
        removeEvent(elem, "click");
+       
      - remove all Events from Element:
        
        removeEvents(elem);
