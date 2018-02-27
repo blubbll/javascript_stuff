@@ -20,4 +20,4 @@ some javascript snippets i find useful
        }, false);
   
   - import:
-    - https://rawgithub.com/blubbll/javascript_stuff/master/dist/eventmanager.js
+    - https://rawgithub.com/blubbll/javascript_stuff/master/dist/eventmanager.min.js
