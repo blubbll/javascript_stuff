@@ -4,12 +4,12 @@ some javascript snippets i find useful
 - find.js
 
   - usage:
-    - find("#content");
-    - find(".classname");
-    - find("button");
-    - find("[w4]");
-    - find('[toggle="modal"]');
-    - findAll('.test');
+    - find("#content");  (ID)
+    - find(".classname");(CLASS)
+    - find("button");    (TAGNAME)
+    - find("[w4]");      (ATTR)
+    - find('[toggle="modal"]'); (ATTR w/ VALUE)
+    - findAll('.test');         (ALL with Class)
     - findAll ...
   
   - import:
@@ -18,11 +18,21 @@ some javascript snippets i find useful
 - eventManager.js
 
   - usage:
-    - addEvent(elem, "click", function(){
+    - add an Event:
+    
+       addEvent(elem, "click", function(){
     
        action();
       
        }, false);
+       
+       
+     - remove an Event:
+       
+       removeEvent(elem, "click");
+     - remove all Events from Element:
+       
+       removeEvents(elem);
   
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/dist/eventmanager.min.js
