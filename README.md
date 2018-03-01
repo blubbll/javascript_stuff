@@ -20,7 +20,7 @@ some javascript snippets i find useful
   - usage:
     - add an Event to Element:
     
-       addEvent(elem, "click", function(){
+       events.add(elem, "click", function(){
     
        action();
       
@@ -29,11 +29,15 @@ some javascript snippets i find useful
        
      - remove an Event from Element:
        
-       removeEvent(elem, "click");
+       events.remove(elem, "click");
        
      - remove all Events from Element:
        
-       removeEvents(elem);
+       events.removeAll(elem);
+       
+     - reset all Events:
+       
+       events.reset();  
   
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/dist/eventmanager.min.js
