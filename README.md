@@ -58,3 +58,31 @@ some javascript snippets i find useful
   
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/dist/timecheck.min.js
+
+
+
+- Visi.js (show and hide stuff, relies on css's visibility flag)
+
+  - usage:
+    - hide element
+    
+       Visi.hide(elem);
+       
+    - show element:
+    
+       Visi.show(elem);
+       
+    - check if element is visible:
+    
+       Visi.shown(elem);
+       
+    - check if element is hidden:
+    
+       Visi.hidden(elem);
+  
+    - reset visibility modifications:
+    
+       Visi.hidden(elem);
+  
+  - import:
+    - https://rawgithub.com/blubbll/javascript_stuff/master/dist/Visi.min.js
