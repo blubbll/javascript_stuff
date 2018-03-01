@@ -1,7 +1,7 @@
 # javascript_stuff
 some javascript snippets i find useful
 
-- find.js
+- find.js (find elements)
 
   - usage:
     - find("#content");  (ID)
@@ -15,7 +15,9 @@ some javascript snippets i find useful
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/dist/find.min.js
 
-- eventManager.js
+
+
+- eventManager.js (manage events)
 
   - usage:
     - add an Event to Element:
@@ -41,3 +43,18 @@ some javascript snippets i find useful
   
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/dist/eventmanager.min.js
+
+
+- timecheck.js (check timestuff; uses browser's time)
+
+  - usage:
+    - check if Day:
+    
+       time.isDay;
+       
+    - check if Night:
+    
+       time.isNight;
+  
+  - import:
+    - https://rawgithub.com/blubbll/javascript_stuff/master/dist/timecheck.min.js
