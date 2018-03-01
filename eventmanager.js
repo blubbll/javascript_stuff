@@ -26,3 +26,8 @@ function removeEvent(element, action) {
 function removeEvents(element) {
     element.outerHTML = element.outerHTML
 }
+
+//Remove all Events, globally.
+function removeAllEvents(){
+  document.body.innerHTML = document.body.innerHTML;
+}
