@@ -24,9 +24,5 @@ function removeEvent(element, action) {
 
 //Removes all Events from element
 function removeEvents(element) {
-    var clone = element.cloneNode();
-    while (element.firstChild) {
-        clone.appendChild(element.lastChild);
-    }
-    element.parentNode.replaceChild(clone, element);
+    element.outerHTML = element.outerHTML
 }
