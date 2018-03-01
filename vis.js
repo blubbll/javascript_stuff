@@ -1,4 +1,4 @@
-var visi = {
+var vis = {
   
   
     //hide element
