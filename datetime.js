@@ -27,7 +27,7 @@ var date = {
         str += String("00" + d.getDate()).slice(-2) +
             '.';
 
-        str += String("00" + d.getMonth()).slice(-2) +
+        str += String("00" + (d.getMonth()+1)).slice(-2) +
             '.';
 
         str += String("00" + d.getFullYear()).slice(-4);
