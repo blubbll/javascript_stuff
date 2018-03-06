@@ -16,7 +16,7 @@ var date = {
 
     get tag(){return new Date().getDate()},
   
-    get monat(){return new Date().getMonth()},
+    get monat(){return new Date().getMonth()+1},
   
     get jahr(){return new Date().getFullYear()},
   
@@ -30,7 +30,7 @@ var date = {
         str += String("00" + d.getMonth()).slice(-2) +
             '.';
 
-        str += String("00" + d.getFullYear()).slice(-2);
+        str += String("00" + d.getFullYear()).slice(-4);
 
 
         return str;
