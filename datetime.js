@@ -14,13 +14,30 @@ var time = {
 
 var date = {
 
-    get tag(){return new Date().getDay()},
+    get tag(){return new Date().getDate()},
   
     get monat(){return new Date().getMonth()},
   
     get jahr(){return new Date().getFullYear()},
   
-    get tag_monat(){return new Date().toDateString()}
+    get string() {
+        str = '';
+        d = new Date();
+
+        str += String("00" + d.getDate()).slice(-2) +
+            '.';
+
+        str += String("00" + d.getMonth()).slice(-2) +
+            '.';
+
+        str += String("00" + d.getFullYear()).slice(-2);
+
+
+        return str;
+    }
+  
+  
+ 
     
 };
 
@@ -38,6 +55,8 @@ function updateTimer(){
 $("#date_tag").text(date.tag);
 $("#date_monat").text(date.monat);
 $("#date_jahr").text(date.jahr);
+
+$("#date_string").text(date.string);
 
 
 
