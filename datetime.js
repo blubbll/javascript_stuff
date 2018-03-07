@@ -40,24 +40,3 @@ var date = {
  
     
 };
-
-function updateTimer(){
-  $("#time_std").text(time.stunde);
-  $("#time_min").text(time.minute);
-  $("#time_sek").text(time.sekunde);
-  
-  $("#time_string").text(time.string)
-  $("#time_stringHM").text(time.string_HM)
-  
-}
-
-
-$("#date_tag").text(date.tag);
-$("#date_monat").text(date.monat);
-$("#date_jahr").text(date.jahr);
-
-$("#date_string").text(date.string);
-
-
-
-var updater = window.setInterval(updateTimer, 900);
