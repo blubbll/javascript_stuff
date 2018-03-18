@@ -1,4 +1,5 @@
 function find(search) {
+str = search;
     //Attr
     if (search.indexOf('=') !== -1) {
         type = '=';
