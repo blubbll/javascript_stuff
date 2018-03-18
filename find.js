@@ -39,6 +39,7 @@ function find(search) {
 
 function findAll(search) {
     //Attr
+str = search.toString()
     if (search.indexOf('=') !== -1) {
         type = '=';
         attr = str.split('=')[0];
