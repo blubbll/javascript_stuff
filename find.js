@@ -1,12 +1,13 @@
 function find(search) {
-str = search;
+  str = search;
     //Attr
-    if (search.indexOf('=') !== -1) {
+    if (search.indexOf('[') !== -1 && search.indexOf('=') == -1) {
         type = '=';
         attr = str.split('=')[0];
         val = str.split('=')[1];
+      
         //Attr mit value
-    } else if (search.indexOf('[') !== -1 && search.indexOf(']') !== -1) {
+    } else if (search.indexOf('[') !== -1 && search.indexOf('=') !== -1) {
         type = "[]";
         attr = search.replace("[", '').replace("]", '');
         //Normaler typ
@@ -24,11 +25,17 @@ str = search;
 
             //attr
         case '[]':
-            return document.querySelector('[' + attr + ']');
-
+            All = document.getElementsByTagName("*");
+              for (var i = 0; i < All.length; i++)       {
+                if (All[0].getAttribute(attr) == null) { return All[0]; }
+              }
             //attr + value
         case '=':
-            return document.querySelector('[' + attr + '"="' + val + '"]');
+       
+            All = document.getElementsByTagName("*");
+              for (var i = 0; i < All.length; i++)       {
+                if (All[0].getAttribute(attr) == val) { return All[0]; }
+              }
 
             //tagname
         default:
@@ -63,11 +70,17 @@ str = search.toString()
 
             //attr
         case '[]':
-            return document.querySelectorAll('[' + attr + ']');
+            All = document.getElementsByTagName("*");
+              for (var i = 0; i < All.length; i++)       {
+                if (All[0].getAttribute(attr) == null) { return All[i]; }
+              }
 
             //attr + value
         case '=':
-            return document.querySelectorAll('[' + attr + '"="' + val + '"]');
+            All = document.getElementsByTagName("*");
+              for (var i = 0; i < All.length; i++)       {
+                if (All[i].getAttribute(attr) == val) { return All[i]; }
+              }
 
             //tagname
         default:
