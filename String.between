@@ -1,0 +1,11 @@
+String.prototype.between = String.prototype.between || function(t, e) {
+    if (t == e) {
+        var r = t;
+        r = t;
+        var i = this.indexOf(r);
+        if (-1 == i) return "";
+        var n = this.indexOf(r, i + 1);
+        return -1 == n ? "" : this.substr(i + 1, n - i - 1)
+    }
+    return this.substring(this.lastIndexOf(t) + 1, this.lastIndexOf(e))
+};
