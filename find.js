@@ -1,15 +1,21 @@
 function find(search) {
-  str = search;
     //Attr
     if (search.indexOf('[') !== -1 && search.indexOf('=') == -1) {
-        type = '=';
-        attr = str.split('=')[0];
-        val = str.split('=')[1];
+      
+
+      type = "[]";
+        attr = search.split('=')[0];
       
         //Attr mit value
-    } else if (search.indexOf('[') !== -1 && search.indexOf('=') !== -1) {
-        type = "[]";
-        attr = search.replace("[", '').replace("]", '');
+    } else if (search.indexOf('[') !== -1 && search.indexOf('=') != -1) {
+
+           type = '=';
+      
+      attr = search.split('=')[0].replace("[", '');
+
+
+        val = search.split('=')[1].replace("[", '').replace("]", '').replace("\"", '').replace("\"", '')
+       
         //Normaler typ
     } else {
         type = search.charAt(0);
@@ -29,13 +35,16 @@ function find(search) {
               for (var i = 0; i < All.length; i++)       {
                 if (All[0].getAttribute(attr) == null) { return All[0]; }
               }
+        break;
             //attr + value
         case '=':
-       
             All = document.getElementsByTagName("*");
               for (var i = 0; i < All.length; i++)       {
-                if (All[0].getAttribute(attr) == val) { return All[0]; }
+
+                if (All[i].getAttribute(attr) == val) {
+                  return All[i];                                           }
               }
+   
 
             //tagname
         default:
@@ -47,15 +56,20 @@ function find(search) {
 
 function findAll(search) {
     //Attr
-str = search.toString()
-    if (search.indexOf('=') !== -1) {
-        type = '=';
-        attr = str.split('=')[0];
-        val = str.split('=')[1];
+    if (search.indexOf('[') !== -1 && search.indexOf('=') == -1) {
+      
+
+      type = "[]";
+        attr = search.split('=')[0];
+      
         //Attr mit value
-    } else if (search.indexOf('[') !== -1 && search.indexOf(']') !== -1) {
-        type = "[]";
-        attr = search.replace("[", '').replace("]", '');
+    } else if (search.indexOf('[') !== -1 && search.indexOf('=') != -1) {
+
+           type = '=';
+      
+      attr = search.replace("[", '').replace("]", '');
+
+        val = search.split('=')[1].replace("[", '').replace("]", '').replace("\"", '').replace("\"", '')
         //Normaler typ
     } else {
         type = search.charAt(0);
@@ -77,6 +91,7 @@ str = search.toString()
 
             //attr + value
         case '=':
+        
             All = document.getElementsByTagName("*");
               for (var i = 0; i < All.length; i++)       {
                 if (All[i].getAttribute(attr) == val) { return All[i]; }
