@@ -32,7 +32,6 @@ function find(search) {
             All = document.getElementsByTagName("*");
             for (var i = 0; i < All.length; i++) {
                 if (All[i].getAttribute("id") == id) {
-                    alert(All[i]);
                     return All[i];
 
                 }
