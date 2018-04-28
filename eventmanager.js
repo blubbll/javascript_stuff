@@ -1,6 +1,7 @@
 var events = {
     //Add function for specific action to element
     add: function(element, action, func) {
+			if(typeof element!="undefined" && element != null)
         window[element + action] = func;
         handle = window[element + action];
         if (document.addEventListener)
