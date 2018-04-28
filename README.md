@@ -26,7 +26,7 @@ some javascript snippets i find useful
     
        action();
       
-       }, false);
+       });
        
        
      - remove an Event from Element:
@@ -35,11 +35,11 @@ some javascript snippets i find useful
        
      - remove all Events from Element:
        
-       events.removeAll(elem);
+       events.remove(elem);
        
      - reset all Events:
        
-       events.reset();  
+       events.clear();  
   
   - import:
     - https://rawgithub.com/blubbll/javascript_stuff/master/dist/eventmanager.min.js
