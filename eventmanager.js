@@ -1,13 +1,14 @@
 var events = {
     //Add function for specific action to element
     add: function(element, action, func) {
-			if(typeof element!="undefined" && element != null)
-        window[element + action] = func;
-        handle = window[element + action];
-        if (document.addEventListener)
-            element.addEventListener(action, handle, false);
-        else if (document.detachEvent)
-            element.attachEventListener(action, handle);
+			if(element){
+					window[element + action] = func;
+					handle = window[element + action];
+					if (document.addEventListener)
+							element.addEventListener(action, handle, false);
+					else if (document.detachEvent)
+							element.attachEventListener(action, handle);
+				}
     },
     //Remove event for element
     remove: function(element, action) {
