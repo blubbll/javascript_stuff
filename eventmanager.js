@@ -1,9 +1,20 @@
 var events = {
     //Add function for specific action to element
     add: function(element, action, func) {
+        function isArray(r) {
+            return !!r && r.constructor === Array
+        }
         if (element) {
             window[element + action] = func;
             handle = window[element + action];
+            if (isArray(action)) {
+                for (var i = 0, len = action.length; i < len; i++) {
+                    if (document.addEventListener)
+                        element.addEventListener(action[i], handle, false);
+                    else if (document.detachEvent)
+                        element.attachEventListener(action[i], handle);
+                }
+            }
             if (document.addEventListener)
                 element.addEventListener(action, handle, false);
             else if (document.detachEvent)
@@ -25,7 +36,6 @@ var events = {
             element.outerHTML = element.outerHTML
         }
     },
-
     //Remove all Events, globally.
     clear: function(e) {
         //Remove all Events, globally.
